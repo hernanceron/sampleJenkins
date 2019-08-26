@@ -3,9 +3,7 @@ pipeline {
      coloco agente que voyo a usar en este caso agente docker
     */
     agent {
-        node {
-            label 'docker'
-        }
+        label 'docker'
     }
 
     environment {
@@ -14,7 +12,6 @@ pipeline {
     }
 
     stages {
-
         stage('Build and Publish Image'){
             agent {
                 docker {
