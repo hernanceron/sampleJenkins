@@ -11,9 +11,6 @@ pipeline {
 
     stages {
         stage('Build and Publish Image'){           
-            when {
-                branch 'master'
-            }
             steps {
                 sh """
                     docker build -t ${IMAGE} .
