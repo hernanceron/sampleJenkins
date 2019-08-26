@@ -2,9 +2,7 @@ pipeline {
     /*
      coloco agente que voyo a usar en este caso agente docker
     */
-    agent {
-        label 'docker'
-    }
+    agent any
 
     environment {
         IMAGE = 'sample-django'
