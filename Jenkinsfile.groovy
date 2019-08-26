@@ -14,16 +14,14 @@ pipeline {
     }
 
     stages {
-        stage('Build') {
+
+        stage('Build and Publish Image'){
             agent {
                 docker {
                     reuseNode true
                     image 'python:3.7'
                 }
             }
-        }
-
-        stage('Build and Publish Image'){
             when {
                 branch 'master'
             }
