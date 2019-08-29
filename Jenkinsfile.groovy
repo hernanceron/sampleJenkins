@@ -15,9 +15,13 @@ pipeline {
                 docker {                    
                     image 'python'
                 }
-            }           
+            } 
+            when{
+                branch 'master'
+            }          
             steps {
                 sh """
+                    docker login -u hernanceron -p chanfle2099
                     docker build -t ${IMAGE} .
                     docker tag ${IMAGE} ${IMAGE}:${VERSION}
                     docker push ${IMAGE}:${VERSION}
