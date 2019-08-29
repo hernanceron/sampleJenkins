@@ -20,8 +20,8 @@ pipeline {
                 sh """
                     docker login -u hernanceron -p chanfle2099
                     docker build -t ${IMAGE} .
-                    docker tag ${IMAGE} ${IMAGE}:${VERSION}
-                    docker push ${IMAGE}:${VERSION}
+                    docker tag ${IMAGE} hernanceron/${IMAGE}:${VERSION}
+                    docker push hernanceron/${IMAGE}:${VERSION}
                 """
             }
         }
