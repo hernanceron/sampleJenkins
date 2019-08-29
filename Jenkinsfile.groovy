@@ -13,8 +13,7 @@ pipeline {
         stage('Build and Publish Image'){
             agent {
                 docker {                    
-                    image 'docker:dind'
-                    args '-u root:root -v //var/run/docker.sock:/var/run/docker.sock'
+                    image 'python'
                 }
             }
             when {
