@@ -15,9 +15,6 @@ pipeline {
                 docker {                    
                     image 'python'
                 }
-            } 
-            when{
-                branch 'master'
             }          
             steps {
                 sh """
